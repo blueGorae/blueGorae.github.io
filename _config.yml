@@ -6,7 +6,7 @@
 # --- Required options --- #
 
 # Name of website
-title: blueGorae's 헤엄
+title: blueGorae's Personal site
 
 # Your name to show in the footer
 author: Seongtae Kim
@@ -47,7 +47,7 @@ social-network-links:
 #   patreon: DeanAttali
 #   youtube: c/daattali
 #  reddit: yourname
- linkedin: "https://www.linkedin.com/in/%EC%84%B1%ED%83%9C-%EA%B9%80-05ba20162/"
+  linkedin: "https://www.linkedin.com/in/%EC%84%B1%ED%83%9C-%EA%B9%80-05ba20162/"
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
