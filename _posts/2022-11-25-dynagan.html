@@ -1,0 +1,164 @@
+<!-- ---
+layout: default
+permalink: /dynagan/
+--- -->
+
+<link rel="stylesheet" href="/assets/dynagan/css/style.css">
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({            
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+    });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title> DynaGAN </title>
+
+ </head>
+ <body>
+  <div class="n-header">
+  </div>
+  <div class="n-title">
+   <h1>
+    <span style="color:#E97B9E; -webkit-text-stroke: 3px #082333;">Dyna</span><span style="color:#60A8D0; -webkit-text-stroke: 3px #082333;">GAN</span> <br>
+   </h1>
+  </div>
+  <div class="n-subtitle">
+    <h1>
+        Dynamic Few-shot Adaptation of GANs to Multiple Domains
+    </h1>
+  </div>
+  <div class="n-conference">
+    <h1>
+     SIGGRAPH Asia 2022
+    </h1>
+   </div>
+  <div class="n-byline">
+   <div class="byline">
+    <ul class="authors">
+     <li> Seongtae Kim <sup> 1 </sup> </li>
+     <li> Kyoungkook Kang <sup> 1 </sup> </li>
+     <li> Geonung Kim <sup> 1 </sup> </li>
+     <br>
+     <li> Seung-Hwan Baek <sup> 1 </sup> </li>
+     <li> Sunghyun Cho <sup> 1, 2 </sup> </li>
+    </ul>
+    <ul class="authors affiliations">
+     <li> <sup> 1 </sup> POSTECH </li> 
+     <li> <sup> 2 </sup> Pebblous </li>
+    </ul>
+   </div>
+  </div>
+  <div class="n-article">
+       <div class="l-article">
+           <img src="/assets/dynagan/img/teaser.png" width="100%">
+       </div>
+
+       <h2 id="abstract"> Abstract </h2>
+       <p>
+        Few-shot domain adaptation to multiple domains aims to learn a complex image distribution across multiple domains from a few training images. A naïve solution here is to train a separate model for each domain using few-shot domain adaptation methods. Unfortunately, this approach mandates linearly-scaled computational resources both in memory and computation time and, more importantly, such separate models cannot exploit the shared knowledge between target domains. In this paper, we propose DynaGAN, a novel few-shot domain-adaptation method for multiple target domains. DynaGAN has an adaptation module, which is a hyper-network that dynamically adapts a pretrained GAN model into the multiple target domains. Hence, we can fully exploit the shared knowledge across target domains and avoid the linearly-scaled computational requirements. As it is still computationally challenging to adapt a large-size GAN model, we design our adaptation module light-weight using the rank-1 tensor decomposition. Lastly, we propose a contrastive-adaptation loss suitable for multi-domain few-shot adaptation. We validate the effectiveness of our method through extensive qualitative and quantitative evaluations.       </p>
+
+   <h2 id="framework">
+    Framework
+   </h2>
+
+   <div class="l-page fig">
+       <div class="l-article">
+           <img src="/assets/dynagan/img/framework.png" width="100%">
+       </div>
+       <div class="figurecaption">
+           <div>
+               <!-- <strong> Overall framework for BigColor</strong> -->
+           </div>
+       </div>
+   </div>
+   <p>
+    <i>DynaGAN</i> network consists of a generator pretrained on a source domain and an adaptation module that dynamically modulates the generator parameters. <i>DynaGAN</i> takes a one-hot vector $c$ encoding a target domain as an input, projects it to a continuous representation $\upsilon$ through a mapping network $M_A$, and estimates modulation parameters $\Delta \varphi$ and $\delta$ through affine layers. These parameters modulate the weight of each convolutional layer in the generator. As a result, the generator is adapted to the target domain.
+   </p>
+
+   <h2 id="links">
+    Links
+   </h2>
+    <div class="grid download-section">
+    <div class="download-thumb">
+    <a href="https://blueGorae.github.io/dynagan" target="_blank">
+    <img class="dropshadow" src="/assets/dynagan/img/paper_thumnail.png" >
+    </a>
+    </div>
+    <div class="download-links">
+        <ul>
+            <li> <a href="/assets/dynagan/papers/main.pdf" target="_blank"> Paper </a> </li>
+            <li> <a href="/assets/dynagan/papers/supple.pdf" target="_blank"> Supplement </a> </li>
+            <li> <a href="" target="_blank"> Code release on GitHub (coming soon) </a> </li>
+            <li> <a href="" target="_blank"> ArXiv (coming soon) </a> </li>
+        </ul>
+    </div>
+    </div>
+
+   <h2 id="videos">
+    Results
+   </h2>
+   <p>
+    <!-- The first two videos demonstrate... -->
+   </p>
+
+    <div class="l-page fig">
+        <div class="l-article">
+            <img src="/assets/dynagan/img/img2img.png" width="100%">
+        </div>
+        <div class="figurecaption" style="text-align:center">
+            <div>
+                <strong> Figure 1: Image-to-image translation of real-world images. </strong>
+            </div>
+        </div>
+    </div>
+    <p>
+    <!-- The following images show ... -->
+    </p>
+
+    <div class="l-page fig">
+        <div class="l-article">
+            <img src="/assets/dynagan/img/degree_control.png" width="100%">
+        </div>
+        <div class="figurecaption" style="text-align:center">
+            <div>
+                <strong> Figure 2: Adaptation degree control. </strong>
+            </div>
+        </div>
+    </div>
+    <p>
+    <!-- The following images show ... -->
+    </p>
+
+    <div class="l-page fig">
+        <div class="l-article">
+            <img src="/assets/dynagan/img/manipulate.png" width="100%">
+        </div>
+        <div class="figurecaption" style="text-align:center">
+            <div>
+                <strong> Figure 3: Semantic editing. </strong>
+            </div>
+        </div>
+    </div>
+    <p>
+    <!-- The following images show ... -->
+    </p>
+
+   <h2 id="citation">
+    Citation
+   </h2>
+<pre><code> @inproceedings{Kim2022DynaGAN,
+    title     = {DynaGAN: Dynamic Few-shot Adaptation of GANs to Multiple Domains},
+    author    = {Seongtae Kim and Kyoungkook Kang and Geonung Kim and Seung-Hwan Baek and Sunghyun Cho},
+    booktitle = {Proceedings of the ACM (SIGGRAPH Asia)},
+    year      = {2022}
+}</code></pre>
+  <div class="n-footer">
+  </div>
+ 
+
+</body></html>
