@@ -1252,6 +1252,10 @@ table tfoot td {
     color: inherit;
 }
 
+.about .vcard ul i:hover{
+    -webkit-transform: scale3d(1.05, 1.05, 1);
+    transform: scale3d(1.05, 1.05, 1);
+}
 
 /* .about .author-name::after {
     content: "";
@@ -1378,6 +1382,19 @@ footer .copyright {
     font-size: 14px;
     text-align: center;
     margin: 0;
+}
+
+.section-title{
+    border-bottom: 1px solid #515151;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    font-size: 24px;
+    width: 100%;
+
+}
+
+.publications {
+    margin: 0 10px;
 }
 
 .post {
