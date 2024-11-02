@@ -1232,6 +1232,27 @@ table tfoot td {
     color: inherit;
 }
 
+.aboud .vcard{
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.about .vcard ul{
+    /* left align */
+    text-align: left;
+    list-style: none;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.about .vcard ul li a:visited, a:link, a:active {
+    text-decoration: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    color: inherit;
+}
+
+
 /* .about .author-name::after {
     content: "";
     position: absolute;
@@ -1255,7 +1276,8 @@ table tfoot td {
 
 .about p {
     font-size: 16px;
-    margin: 0 0 10px;
+    margin: 10px auto;
+    text-align: left;
 }
 
 .content-box {

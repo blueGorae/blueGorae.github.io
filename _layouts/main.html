@@ -5,18 +5,24 @@ layout: default
 <aside class="sidebar">
   <header>
     <div class="about">
-    <div class="profile-area">
-        <div class="cover-author-image">
-            <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
-        </div>
-        <div class="second-cover-author-image">
-            <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.second-author-img %}{{site.second-author-img}}{% endif %}" alt="{{site.author}}"></a>
-        </div>
-    </div>
+      <div class="profile-area">
+          <div class="cover-author-image">
+              <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.author-img %}{{site.author-img}}{% endif %}" alt="{{site.author}}"></a>
+          </div>
+          <div class="second-cover-author-image">
+              <a href="{{site.baseurl}}/"><img src="{{site.baseurl}}/assets/img/{% if site.second-author-img %}{{site.second-author-img}}{% endif %}" alt="{{site.author}}"></a>
+          </div>
+      </div>
       <div class="author-name">
         <a href="{{site.baseurl}}/">{{site.author}}</a>
       </div>
       <p>{{site.about-author}}</p>
+      <div class="vcard">
+        <ul>
+          <li class="vcard-org"><a href="{{site.author-organization-url}}" target="_blank"><i class="fa fa-building" aria-hidden="true"> {{site.author-organization}} </i></a></li>
+          <li class="vcard-address"><a href="https://www.google.com/maps/place/{{site.author-city}}" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"> {{site.author-city}} </i></a></li>
+        </ul>
+      </div>
     </div>
   </header> <!-- End Header -->
   <footer>
