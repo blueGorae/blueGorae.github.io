@@ -8,8 +8,9 @@ site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
 author: Seongtae Kim # add your name
-author-img: profile.jpg # add your photo
-about-author: I am an AI researcher, particularly in computer vision and graphics. # add description
+author-img: profile/profile.jpg # add your photo
+second-author-img: second_profile/second_profile.png # add your second photo
+about-author: I am an AI researcher in computer vision and graphics. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: blueGorae # add your Github handle
