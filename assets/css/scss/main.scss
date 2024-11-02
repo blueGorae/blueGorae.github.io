@@ -128,7 +128,7 @@ table tfoot td {
 }
 
 .clearfix::before, .clearfix::after {
-  content: "";
+  // content: "";
   display: table;
 }
 
