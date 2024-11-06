@@ -11,7 +11,7 @@ author: Seongtae Kim # add your name
 author-img: profile/profile.jpg # add your photo
 second-author-img: second_profile/second_profile.png # add your second photo
 about-author: I am an AI researcher in computer vision and graphics. # add description
-author-organization: Neosapience # add your organization
+author-organization: "Neosapience" # add your organization
 author-organization-url: https://typecast.ai/ # add your organization URL
 author-city: "Seoul, South Korea" # add your city
 social-twitter: # add your Twitter handle
