@@ -1400,6 +1400,36 @@ footer .copyright {
     max-width: 100%;
 }
 
+.projects .post-title {
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 10px;
+}
+
+.projects .video-container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.projects .project-post .post-title img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and heading */
+}
+.projects .project-post .post-title {
+    font-family: 'PT Serif', serif;
+    text-decoration: none;
+    color: #263959;
+}
+
+.projects .project-post .post-title:hover {
+    -webkit-transform: translate(0px, -2px);
+    -ms-transform: translate(0px, -2px);
+    transform: translate(0px, -2px);
+    font-weight: 600;
+}
+
+
 .post {
     width: 100%;
     max-width: 100%;
@@ -1731,13 +1761,27 @@ a.newer-posts:hover {
         max-width: 480px;
         margin: 10px auto auto;
     }
+    .about .second-cover-author-image {
+        position: absolute;
+        top: 0px;
+        left: 30%;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 10px;
+        -webkit-border-radius: 100%;
+        border-radius: 100%;
+        overflow: hidden;
+        background-color: #333030;
+    }
+
     .about img {
-        width: 100px;
-        height: 100px;
+        /* width: 100px; */
+        /* height: 100px; */
         -webkit-border-radius: 100%;
         border-radius: 100%;
         margin-bottom: 10px;
     }
+
     .content-box {
         padding: 20px 10px;
         display: -webkit-box;
